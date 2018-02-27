@@ -31,14 +31,11 @@ begin
                 variable i, j, k        : INTEGER;
                 variable InBlock        : RF;
                 variable COSBlock       : RF;
+                variable COSBlockT       : RF;
                 variable TempBlock      : RF;
                 variable OutBlock       : RF;
                 variable A, B, P, Sum   : INTEGER; 
                 
-                type StateType is 
-                    (Initial, GetInput, Compute, Output);
-                signal CurrState, NextState: StateType;
-
         begin
                 -------------------------------
                 -- Initialize parameter matrix
@@ -54,7 +51,24 @@ begin
         ( 125,  -122,   115,    -103,   88,     -69,    47,     -24  )
                         );  
 
+                COSBlockT := ( 
+        ( 125,  125,    125,    125,    125,     125,     125,     125  ),
+        ( 122,  103,    69,     24,     -24,     -69,     -103,    -122  ),
+        ( 115,  47,     -47,    -115,   -115,    -47,     47,      115  ),
+        ( 103,  -24,    -122,   -69,    69,     122,      24,      -103  ),
+        ( 88,   -88,    -88,    88,     88,     -88,      -88,     88  ),
+        ( 69,   -122,   24,     103,    -103,    -24,     122,     -69  ),
+        ( 47,   -115,   115,    -47,    -47,    115,      -115,    47  ),
+        ( 24,   -69,    103,    -122,   122,    -103,     69,      -24  )
+                        );                  
+                        
+
      -- add your code here
+     -- Wait until Start = '1'
+     wait until Start = '1';
+     Done <= '0';
+     wait until Clk = '1' and Clk'event;
+     
      -- Read Input Data
      for i in 0 to 7 loop
         for j in 0 to 7 loop
@@ -68,8 +82,8 @@ begin
         for j in 0 to 7 loop
             Sum := 0;
             for k in 0 to 7 loop
-                A := COSBlock(i,j);
-                B := InBlock(i,j);
+                A := COSBlock(i,k);
+                B := InBlock(k,j);
                 P := A*B;
                 Sum := Sum + P;
                 if (k = 7) then
@@ -84,8 +98,8 @@ begin
         for j in 0 to 7 loop
             Sum := 0;
             for k in 0 to 7 loop
-                A := TempBlock(i,j);
-                B := CosBlock(j,i);
+                A := TempBlock(i,k);
+                B := CosBlock(k,i); -- Declare a CosBlock transpose
                 P := A*B;
                 Sum := Sum + P;
                 if (k = 7) then
@@ -95,14 +109,18 @@ begin
         end loop;
      end loop;  
      
+     wait until Clk = '1' and Clk'event;
+     Done <= '1';
+     
      -- Let Output out;
      for i in 0 to 7 loop
         for j in 0 to 7 loop
+            wait until Clk = '1' and Clk'event;
+            Done <= '0';
             Dout <= OutBlock(i,j);
         end loop;
      end loop;          
                     
-                        
-                
+                                        
     end process;
 end behavioral;

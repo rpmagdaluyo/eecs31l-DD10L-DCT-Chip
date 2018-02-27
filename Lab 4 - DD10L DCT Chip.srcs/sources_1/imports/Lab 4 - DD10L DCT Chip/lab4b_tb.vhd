@@ -123,6 +123,19 @@ BEGIN
                 end loop;
 
 				-- continue feeding in rest of sandwich
+				for i in 0 to 4 loop
+				    for i in 0 to 7 loop
+				        wait until Clk = '1';
+				        Din <= 0;
+				    end loop;
+				end loop;
+				
+				for i in 0 to 1 loop
+				    for i in 0 to 7 loop
+				        wait until Clk = '1';
+				        Din <= 255;
+				    end loop;
+				end loop;                
 
                 ---------------------------------
                 --      Handshaking/synchronizing
