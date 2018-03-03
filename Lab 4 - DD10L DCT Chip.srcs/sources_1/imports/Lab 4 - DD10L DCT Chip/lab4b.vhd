@@ -87,6 +87,7 @@ begin
                 P := A*B;
                 Sum := Sum + P;
                 if (k = 7) then
+                    wait until Clk = '1' and Clk'event;
                     TempBlock(i,j) := Sum;
                 end if;
             end loop;
@@ -99,10 +100,11 @@ begin
             Sum := 0;
             for k in 0 to 7 loop
                 A := TempBlock(i,k);
-                B := CosBlock(k,i); -- Declare a CosBlock transpose
+                B := CosBlockT(k,j);
                 P := A*B;
                 Sum := Sum + P;
                 if (k = 7) then
+                    wait until Clk = '1' and Clk'event;
                     OutBlock(i,j) := Sum;
                 end if;
             end loop;
