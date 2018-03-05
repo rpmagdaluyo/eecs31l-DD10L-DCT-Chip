@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_str_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_str" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="82600001fs"></ZoomEndTime>
+      <Cursor1Time time="24400000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="116"></NameColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/tb_str/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/Start" type="logic">
+      <obj_property name="ElementShortName">Start</obj_property>
+      <obj_property name="ObjectShortName">Start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/Din" type="other">
+      <obj_property name="ElementShortName">Din</obj_property>
+      <obj_property name="ObjectShortName">Din</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/uut/RegFile_1/W_data" type="other">
+      <obj_property name="ElementShortName">W_data</obj_property>
+      <obj_property name="ObjectShortName">W_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/Done" type="logic">
+      <obj_property name="ElementShortName">Done</obj_property>
+      <obj_property name="ObjectShortName">Done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/Dout" type="other">
+      <obj_property name="ElementShortName">Dout</obj_property>
+      <obj_property name="ObjectShortName">Dout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/Clk_period" type="other">
+      <obj_property name="ElementShortName">Clk_period</obj_property>
+      <obj_property name="ObjectShortName">Clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/uut/j_s" type="array">
+      <obj_property name="ElementShortName">j_s[2:0]</obj_property>
+      <obj_property name="ObjectShortName">j_s[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/uut/k_s" type="array">
+      <obj_property name="ElementShortName">k_s[2:0]</obj_property>
+      <obj_property name="ObjectShortName">k_s[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/uut/W_addr_s" type="array">
+      <obj_property name="ElementShortName">W_addr_s[7:0]</obj_property>
+      <obj_property name="ObjectShortName">W_addr_s[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/uut/Count_s" type="array">
+      <obj_property name="ElementShortName">Count_s[8:0]</obj_property>
+      <obj_property name="ObjectShortName">Count_s[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/uut/Controller_1/CurrState" type="other">
+      <obj_property name="ElementShortName">CurrState</obj_property>
+      <obj_property name="ObjectShortName">CurrState</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/uut/Controller_1/NextState" type="other">
+      <obj_property name="ElementShortName">NextState</obj_property>
+      <obj_property name="ObjectShortName">NextState</obj_property>
+   </wvobject>
+</wave_config>

@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   
+-- Create Date:   v2
 -- Design Name:   
 -- Module Name:   
 -- Project Name:  
@@ -33,20 +33,20 @@ USE std.textio.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY tb_beh IS
-END tb_beh;
+ENTITY tb_str IS
+END tb_str;
  
-ARCHITECTURE behavior OF tb_beh IS 
+ARCHITECTURE behavior OF tb_str IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT DCT_beh
+    COMPONENT DCT_str
     PORT(
          Clk : IN  std_logic;
          Start : IN  std_logic;
-         Din : IN  integer;
+         Din : IN  INTEGER;
          Done : OUT  std_logic;
-         Dout : OUT  integer
+         Dout : OUT  INTEGER
         );
     END COMPONENT;
     
@@ -54,19 +54,20 @@ ARCHITECTURE behavior OF tb_beh IS
    --Inputs
    signal Clk : std_logic := '0';
    signal Start : std_logic := '0';
-   signal Din : integer := 0;
+   signal Din : INTEGER := 0;
 
- 	--Outputs
+    --Outputs
    signal Done : std_logic;
-   signal Dout : integer;
+   signal Dout : INTEGER;
 
    -- Clock period definitions
-   constant Clk_period : time := 68 ns;
+   -- Adjust to your actual clock cycle!
+   constant Clk_period : time := 10 ns;
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
-   uut: DCT_beh PORT MAP (
+    -- Instantiate the Unit Under Test (UUT)
+   uut: DCT_str PORT MAP (
           Clk => Clk,
           Start => Start,
           Din => Din,
@@ -77,10 +78,10 @@ BEGIN
    -- Clock process definitions
    Clk_process :process
    begin
-		Clk <= '0';
-		wait for Clk_period/2;
-		Clk <= '1';
-		wait for Clk_period/2;
+        Clk <= '0';
+        wait for Clk_period/2;
+        Clk <= '1';
+        wait for Clk_period/2;
    end process;
  
 
@@ -88,23 +89,22 @@ BEGIN
              '1' after 50 ns,
              '0' after 100 ns;
 
-
    -- Stimulus process
    stim_proc: process
 		          variable stringbuff : LINE;
 					 variable a:integer:= 1;
                 type RF is array ( 0 to 7, 0 to 7 ) of INTEGER;
 
-                -- variable Result : RF := (
-				   -- (...),
-				   -- (...),
-				   -- (...),
-				   -- (...),
-				   -- (...),
-				   -- (...),
-				   -- (...),
-				   -- (...)
-				 -- );
+                variable Result : RF := (
+				    (34636140,  -7147140,  8946420,  -649740,  5747700,  1549380, 4048380,  2848860),
+				    (-10426185, 2151435,   -2693055, 195585,   -1730175, -466395, -1218645, -857565),
+				    (60613245,  -12507495, 15656235, -1137045, 10058475, 2711415, 7084665,  4985505),
+				    (-7775460,  1604460,   -2008380, 145860,   -1290300, -347820, -908820,  -639540),
+				    (35343000,   -7293000,   9129000, -663000, 5865000,  1581000, 4131000,  2907000),
+				    (24209955,   -4995705,  6253365,  -454155,  4017525,  1082985, 2829735, 1991295),
+				    (13960485,  -2880735,  3605955,  -261885,  2316675,  624495,  1631745,  1148265),
+				    (26153820,  -5396820,  6755460,  -490620,  4340100,  1169940, 3056940,  2151180)
+				    );
         begin
 		       	WRITE (stringbuff, string'("Starts Structural Simulation at "));
 		      	WRITE (stringbuff, now);
@@ -123,6 +123,19 @@ BEGIN
                 end loop;
 
 				-- continue feeding in rest of sandwich
+				for i in 0 to 4 loop
+				    for i in 0 to 7 loop
+				        wait until Clk = '1';
+				        Din <= 0;
+				    end loop;
+				end loop;
+				
+				for i in 0 to 1 loop
+				    for i in 0 to 7 loop
+				        wait until Clk = '1';
+				        Din <= 255;
+				    end loop;
+				end loop;                
 
                 ---------------------------------
                 --      Handshaking/synchronizing
@@ -136,6 +149,13 @@ BEGIN
 				--------------------------------
 				
 				-- for each clock cycle now, start comparing values
+				for i in 0 to 7 loop
+					for j in 0 to 7 loop
+					    wait until Clk = '1';
+						assert Dout = Result(i,j) report "Dout not equal to desired output" severity warning;
+					end loop;
+				end loop;
+						
 				WRITE (stringbuff, string'("Verification completed. Simulation Ends at "));
 				WRITE (stringbuff, now);
 				WRITELINE (output, stringbuff);

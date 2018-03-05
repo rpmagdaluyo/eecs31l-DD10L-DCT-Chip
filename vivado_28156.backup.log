@@ -1,0 +1,658 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Feb 26 19:53:55 2018
+# Process ID: 28156
+# Current directory: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24064 C:\Users\Richard\Documents\UCI\Freshman\2018 Winter\EECS 31L\Labs\Lab 4 - DD10L DCT Chip\Lab 4 - DD10L DCT Chip.xpr
+# Log file: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/vivado.log
+# Journal file: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip'
+INFO: [Project 1-313] Project file moved from 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Lab 4 - DD10L DCT Chip' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 727.578 ; gain = 75.301
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_beh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_beh_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity DCT_beh
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_beh
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 18ac0dbc74d542cbba92616686de0fc1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_beh_behav xil_defaultlib.tb_beh -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.DCT_beh [dct_beh_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_beh
+Built simulation snapshot tb_beh_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 727.609 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_beh_behav -key {Behavioral:sim_1:Functional:tb_beh} -tclbatch {tb_beh.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source tb_beh.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starts Structural Simulation at 0 ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_beh_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 744.574 ; gain = 16.965
+run 333 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 2000 ns
+Starts Structural Simulation at 0 ns
+run 2000 ns
+run 2000 ns
+Verification completed. Simulation Ends at 4590 ns
+run 2000 ns
+run 2000 ns
+run 2000 ns
+run 2000 ns
+run 2000 ns
+run 2000 ns
+run 2000 ns
+run 2000 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4658 ns
+Starts Structural Simulation at 0 ns
+Verification completed. Simulation Ends at 4590 ns
+run 4658 ns
+run 4658 ns
+add_bp {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd} 81
+add_bp {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd} 90
+add_bp {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd} 97
+remove_bps -file {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd} -line 81
+remove_bps -file {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd} -line 90
+add_bp {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd} 90
+remove_bps -file {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd} -line 90
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4658 ns
+Starts Structural Simulation at 0 ns
+Stopped at time : 4454 ns : File "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" Line 97
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4658 ns
+Starts Structural Simulation at 0 ns
+Stopped at time : 4454 ns : File "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" Line 97
+remove_bps -file {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd} -line 97
+add_bp {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd} 112
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4658 ns
+Starts Structural Simulation at 0 ns
+Stopped at time : 4454 ns : File "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" Line 112
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4658 ns
+Starts Structural Simulation at 0 ns
+Stopped at time : 4454 ns : File "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" Line 112
+run 4658 ns
+Verification completed. Simulation Ends at 4590 ns
+run 4658 ns
+run 4658 ns
+run 4658 ns
+run 4658 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4658 ns
+Starts Structural Simulation at 0 ns
+Stopped at time : 4454 ns : File "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" Line 112
+run 4658 ns
+Verification completed. Simulation Ends at 4590 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 8874 ns
+Starts Structural Simulation at 0 ns
+Stopped at time : 4454 ns : File "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" Line 112
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 8874 ns
+Starts Structural Simulation at 0 ns
+Stopped at time : 4454 ns : File "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" Line 112
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 8874 ns
+Starts Structural Simulation at 0 ns
+Stopped at time : 4454 ns : File "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" Line 112
+remove_bps -file {C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd} -line 112
+update_compile_order -fileset sources_1
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 8874 ns
+Starts Structural Simulation at 0 ns
+Verification completed. Simulation Ends at 4590 ns
+run 8874 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_beh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_beh_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_beh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 18ac0dbc74d542cbba92616686de0fc1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_beh_behav xil_defaultlib.tb_beh -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.DCT_beh [dct_beh_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_beh
+Built simulation snapshot tb_beh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Starts Structural Simulation at 0 ns
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 779.934 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 8942 ns
+Starts Structural Simulation at 0 ns
+Warning: Dout not equal to desired output
+Time: 6834 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6902 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6970 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7106 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7378 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Verification completed. Simulation Ends at 8942 ns
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_beh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_beh_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity DCT_beh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 18ac0dbc74d542cbba92616686de0fc1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_beh_behav xil_defaultlib.tb_beh -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.DCT_beh [dct_beh_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_beh
+Built simulation snapshot tb_beh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Starts Structural Simulation at 0 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 8942 ns
+Starts Structural Simulation at 0 ns
+Warning: Dout not equal to desired output
+Time: 4590 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 4658 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 4726 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 4794 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 4862 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 4930 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 4998 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5066 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5134 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5202 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5270 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5338 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5406 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5474 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5542 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5610 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5678 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5746 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5814 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5882 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 5950 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6018 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6086 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6154 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6222 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6290 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6358 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6426 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6494 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6562 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6630 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6698 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6766 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6834 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6902 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6970 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7038 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7106 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7174 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7242 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7310 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7378 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7446 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7514 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7582 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7650 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7718 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7786 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7854 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7922 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7990 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8058 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8126 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8194 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8262 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8330 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8398 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8466 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8534 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8602 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8670 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8738 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8806 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 8874 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Verification completed. Simulation Ends at 8874 ns
+run 8942 ns
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_beh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_beh_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity DCT_beh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 18ac0dbc74d542cbba92616686de0fc1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_beh_behav xil_defaultlib.tb_beh -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.DCT_beh [dct_beh_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_beh
+Built simulation snapshot tb_beh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Starts Structural Simulation at 0 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 8942 ns
+Starts Structural Simulation at 0 ns
+Warning: Dout not equal to desired output
+Time: 6834 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6902 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6970 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7106 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7378 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Verification completed. Simulation Ends at 8942 ns
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_beh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_beh_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_beh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 18ac0dbc74d542cbba92616686de0fc1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_beh_behav xil_defaultlib.tb_beh -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.DCT_beh [dct_beh_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_beh
+Built simulation snapshot tb_beh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Starts Structural Simulation at 0 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 8942 ns
+Starts Structural Simulation at 0 ns
+Warning: Dout not equal to desired output
+Time: 6834 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6902 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6970 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7106 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7378 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Verification completed. Simulation Ends at 8942 ns
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_beh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_beh_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_beh
+ERROR: [VRFC 10-91] j is not declared [C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd:137]
+ERROR: [VRFC 10-1504] unit behavior ignored due to previous errors [C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd:39]
+INFO: [VRFC 10-240] VHDL file C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_beh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_beh_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tb_beh
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 18ac0dbc74d542cbba92616686de0fc1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_beh_behav xil_defaultlib.tb_beh -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.DCT_beh [dct_beh_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_beh
+Built simulation snapshot tb_beh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Starts Structural Simulation at 0 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 8942 ns
+Starts Structural Simulation at 0 ns
+Warning: Dout not equal to desired output
+Time: 6834 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6902 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 6970 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7106 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 7378 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Verification completed. Simulation Ends at 8942 ns
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_beh' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_beh_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity DCT_beh
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 18ac0dbc74d542cbba92616686de0fc1 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_beh_behav xil_defaultlib.tb_beh -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.DCT_beh [dct_beh_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_beh
+Built simulation snapshot tb_beh_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Starts Structural Simulation at 0 ns
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 792.004 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+Starts Structural Simulation at 0 ns
+run 10 us
+Warning: Dout not equal to desired output
+Time: 15538 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15606 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15674 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15810 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 16082 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Verification completed. Simulation Ends at 17646 ns
+run 10 us
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 17655 us
+Starts Structural Simulation at 0 ns
+Warning: Dout not equal to desired output
+Time: 15538 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15606 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15674 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15810 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 16082 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Verification completed. Simulation Ends at 17646 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 17655 us
+Starts Structural Simulation at 0 ns
+Warning: Dout not equal to desired output
+Time: 15538 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15606 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15674 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15810 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 16082 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Verification completed. Simulation Ends at 17646 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 17655 ns
+Starts Structural Simulation at 0 ns
+Warning: Dout not equal to desired output
+Time: 15538 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15606 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15674 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 15810 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Warning: Dout not equal to desired output
+Time: 16082 ns  Iteration: 1  Process: /tb_beh/stim_proc  File: C:/Users/Richard/Documents/UCI/Freshman/2018 Winter/EECS 31L/Labs/Lab 4 - DD10L DCT Chip/Lab 4 - DD10L DCT Chip.srcs/sources_1/imports/Lab 4 - DD10L DCT Chip/lab4b_tb.vhd
+Verification completed. Simulation Ends at 17646 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 26 21:02:14 2018...
