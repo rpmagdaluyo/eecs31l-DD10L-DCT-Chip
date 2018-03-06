@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="82600001fs"></ZoomEndTime>
-      <Cursor1Time time="24400000fs"></Cursor1Time>
+      <ZoomStartTime time="35852960fs"></ZoomStartTime>
+      <ZoomEndTime time="58252961fs"></ZoomEndTime>
+      <Cursor1Time time="58400000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="116"></NameColumnWidth>
-      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+      <ValueColumnWidth column_width="118"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="14" />
    <wvobject fp_name="/tb_str/Clk" type="logic">
       <obj_property name="ElementShortName">Clk</obj_property>
       <obj_property name="ObjectShortName">Clk</obj_property>
@@ -72,5 +72,10 @@
    <wvobject fp_name="/tb_str/uut/Controller_1/NextState" type="other">
       <obj_property name="ElementShortName">NextState</obj_property>
       <obj_property name="ObjectShortName">NextState</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_str/uut/RegFile_1/Storage[16]" type="array">
+      <obj_property name="ElementShortName">[16,0:7]</obj_property>
+      <obj_property name="ObjectShortName">[16,0:7]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

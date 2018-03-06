@@ -62,7 +62,7 @@ ARCHITECTURE behavior OF tb_str IS
 
    -- Clock period definitions
    -- Adjust to your actual clock cycle!
-   constant Clk_period : time := 10 ns;
+   constant Clk_period : time := 8 ns;
  
 BEGIN
  

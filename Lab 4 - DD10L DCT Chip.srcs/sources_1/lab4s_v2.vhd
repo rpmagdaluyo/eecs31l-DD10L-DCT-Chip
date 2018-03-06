@@ -409,29 +409,31 @@ begin
                     Rst_counter <= '1';
                     
                     if(Start = '1') then
-                        NextState <= Input after Delay;
+                        NextState <= Input;
                     else
-                        NextState <= Initial after Delay;
+                        NextState <= Initial;
                     end if;
                             
-				when Input =>
+				when Input =>        
+                    Rst_counter <= '0';
+                                        
+                    W_en <= '1';
+                    				
 				    if(Count = "000111111") then
-				        NextState <= Output after Delay; -- Placeholder for now
+				        NextState <= Output; -- Placeholder for now
 				    else    
-					    NextState <= Input after Delay;
+				        Inc <= '1';
+					    NextState <= Input;
 					end if;
 					
-					Rst_counter <= '0';
-					Inc <= '1';
-					
-					W_en <= '1';
-					
 				when Output =>
+				    Inc <= '0';
+                    W_en <= '0';
 				    if(Count = X"003F") then				    
-				        NextState <= Initial after Delay;
+				        NextState <= Initial;
 				    else    
 				        NextState <= Output;
-				    end if;  
+				    end if;
             end case;
         end process; 
 
@@ -556,13 +558,15 @@ SIGNAL mult_out: INTEGER;
 SIGNAL add_out: INTEGER;
 SIGNAL R_data1_out, R_data2_out : INTEGER;
 SIGNAL i_s, j_s, k_s: std_logic_vector(2 downto 0);
-SIGNAL W_addr_s: std_logic_vector(7 downto 0) := "10" & j_s & k_s; -- Hardwires 10 to first two bits of W_addr
-SIGNAL Count_s: std_logic_vector(8 downto 0) := i_s & j_s & k_s;
+SIGNAL W_addr_s: std_logic_vector(7 downto 0); -- Hardwires 10 to first two bits of W_addr
+SIGNAL Count_s: std_logic_vector(8 downto 0);
 SIGNAL LoadSum: std_logic;
 SIGNAL reg_sum_out,reg_p_out,reg_a_out,reg_b_out: INTEGER;
 SIGNAL Oe_s :std_logic;
 
 Begin
+    W_addr_s <= "10" & j_s & k_s;
+    Count_s <= i_s & j_s & k_s;    
     -- Add Your Port Mapping Code Here
     Controller_1: Controller port map(
         Clk => Clk,
@@ -584,14 +588,7 @@ Begin
         Sel6 => Sel6_s,
         Sel7 => Sel7_s,
         Oe   => Oe_s,                 
-        Done => Done);
-        
-    Reg_In: Reg port map(
-        Clk => Clk,
-        DIn => Din,
-        Rst => Rst_p,
-        Ld => W_en_s, -- Allows input to be loaded into the register for input when writing into the RegFile
-        DOut => Reg_a_out);
+        Done => Done);        
             
     RegFile_1: RegFile port map(
         R_addr1 => "00000000",
@@ -602,7 +599,7 @@ Begin
         W_en => W_en_s,
         R_data1 => R_data1_out,
         R_data2 => R_data2_out,
-        W_data => reg_a_out,                    
+        W_data => Din,                    
         Clk => Clk);
     
     Counter_1: Counter port map(
